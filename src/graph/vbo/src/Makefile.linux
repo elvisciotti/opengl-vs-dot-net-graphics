@@ -1,0 +1,36 @@
+# Project: vbo
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++
+CC   = gcc
+WINDRES = 
+RES  = 
+OBJ  = main.o Timer.o WaveFunc.o $(RES)
+LINKOBJ  = main.o Timer.o WaveFunc.o $(RES)
+LIBS =  -L"/usr/lib" -lglut -lGLU -lGL
+INCS =  -I"/usr/include" 
+CXXINCS =  
+BIN  = ../bin/vbo
+CXXFLAGS = $(CXXINCS) -Wall   -O2
+CFLAGS = $(INCS)   -O2
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before ../bin/vbo all-after 
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "../bin/vbo" $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Timer.o: Timer.cxx
+	$(CPP) -c Timer.cxx -o Timer.o $(CXXFLAGS)
+
+WaveFunc.o: WaveFunc.cpp
+	$(CPP) -c WaveFunc.cpp -o WaveFunc.o $(CXXFLAGS)

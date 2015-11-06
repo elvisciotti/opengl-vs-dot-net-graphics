@@ -1,0 +1,8 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\ase1.Form1.resources
+obj\Debug\ase1.Properties.Resources.resources
+obj\Debug\ase1.csproj.GenerateResource.Cache
+bin\Debug\ase1.exe
+bin\Debug\ase1.pdb
+obj\Debug\ase1.exe
+obj\Debug\ase1.pdb

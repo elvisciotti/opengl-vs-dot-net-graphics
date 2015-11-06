@@ -1,0 +1,36 @@
+# Project: vboSimple
+# Compiler: Default GCC compiler
+# Compiler Type: MingW 3
+# Makefile created by wxDev-C++ 6.10.2 on 01/04/08 17.59
+
+CPP       = g++.exe
+CC        = gcc.exe
+WINDRES   = windres.exe
+OBJ       = ../bin/main.o ../bin/glInfo.o
+LINKOBJ   = ../bin/main.o ../bin/glInfo.o
+LIBS      = -L"E:/applicazioni/programmi/Dev-Cpp/Lib" -lglut32 -lglu32 -lopengl32 -lwinmm -lgdi32  
+INCS      = -I"include"
+CXXINCS   = -I"E:/applicazioni/programmi/Dev-Cpp/lib/gcc/mingw32/3.4.2/include" -I"E:/applicazioni/programmi/Dev-Cpp/include/c++/3.4.2/backward" -I"E:/applicazioni/programmi/Dev-Cpp/include/c++/3.4.2/mingw32" -I"E:/applicazioni/programmi/Dev-Cpp/include/c++/3.4.2" -I"E:/applicazioni/programmi/Dev-Cpp/include" -I"E:/applicazioni/programmi/Dev-Cpp/" -I"E:/applicazioni/programmi/Dev-Cpp/include/common/wx/msw" -I"E:/applicazioni/programmi/Dev-Cpp/include/common/wx/generic" -I"E:/applicazioni/programmi/Dev-Cpp/include/common/wx/fl" -I"E:/applicazioni/programmi/Dev-Cpp/include/common/wx/gizmos" -I"E:/applicazioni/programmi/Dev-Cpp/include/common/wx/html" -I"E:/applicazioni/programmi/Dev-Cpp/include/common/wx/mmedia" -I"E:/applicazioni/programmi/Dev-Cpp/include/common/wx/net" -I"E:/applicazioni/programmi/Dev-Cpp/include/common/wx/ogl" -I"E:/applicazioni/programmi/Dev-Cpp/include/common/wx/plot" -I"E:/applicazioni/programmi/Dev-Cpp/include/common/wx/protocol" -I"E:/applicazioni/programmi/Dev-Cpp/include/common/wx/stc" -I"E:/applicazioni/programmi/Dev-Cpp/include/common/wx/svg" -I"E:/applicazioni/programmi/Dev-Cpp/include/common/wx/xml" -I"E:/applicazioni/programmi/Dev-Cpp/include/common/wx/xrc" -I"E:/applicazioni/programmi/Dev-Cpp/include/common/wx" -I"E:/applicazioni/programmi/Dev-Cpp/include/common"
+RCINCS    = --include-dir "E:/APPLIC~1/PROGRA~1/Dev-Cpp/include/common"
+BIN       = ../bin/vboSimple.exe
+DEFINES   = 
+CXXFLAGS  = $(CXXINCS) $(DEFINES)   -fexpensive-optimizations -O3
+CFLAGS    = $(INCS) $(DEFINES)   -fexpensive-optimizations -O3
+GPROF     = gprof.exe
+RM        = rm -f
+LINK      = g++.exe
+
+.PHONY: all all-before all-after clean clean-custom
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	$(RM) $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(LINK) $(LINKOBJ) -o "..\bin\vboSimple.exe" $(LIBS)
+
+../bin/main.o: $(GLOBALDEPS) main.cpp GL/glut.h glext.h
+	$(CPP) -c main.cpp -o ../bin/main.o $(CXXFLAGS)
+
+../bin/glInfo.o: $(GLOBALDEPS) glInfo.cpp glInfo.h
+	$(CPP) -c glInfo.cpp -o ../bin/glInfo.o $(CXXFLAGS)
