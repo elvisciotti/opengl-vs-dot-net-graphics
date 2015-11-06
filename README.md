@@ -1,7 +1,7 @@
-opengl-vs-dot-net-graphics
-==========================
+OpenGL vs .NET speed comparison
+===============================
 
-C# project comparing speed of Microsoft Graphics vs OpenGL (without VBO) in rendering thousands of polygons, written in Italian
+C# project written to compare speed of Microsoft Graphics vs OpenGL (without VBO) in rendering thousands of polygons, written in Italian. Employed to evaluate decision for .NET-based GIS software.
 
 University project, 2008, http://corsi.unibo.it/ 
 
