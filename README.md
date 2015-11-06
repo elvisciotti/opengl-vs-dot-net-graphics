@@ -11,3 +11,4 @@ Used libraries
  * http://icarus.sourceforge.net/
  
 
+![screenshot](https://github.com/elvisciotti/opengl-vs-dot-net-graphics/blob/master/screenshot1.png)
